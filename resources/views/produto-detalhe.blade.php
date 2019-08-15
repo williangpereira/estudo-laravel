@@ -3,26 +3,7 @@
 @section('title', 'Inicio')
 
 @section('content')
-<header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('Images/banner1.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('Images/banner2.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+
 <section id="produtos" class="new-products mt-5">
     <div class="container text-center">
         <h1>Mais vendidos</h1>
@@ -35,11 +16,11 @@
                 <div class="card">
                     <img class="card-img-top" src="{{ $produto['imagem'] }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title text-center">{{ $produto->nome}}</h5>
+                        <h5 class="card-title text-center">{{ $produto['nome'] }}</h5>
                         <ul class="list-group list-group-flush text-center">
-                            <li class="list-group-item"><strong>R$ {{ $produto->preco }}</strong></li>
+                            <li class="list-group-item"><strong>R$ {{ $produto['preco'] }}</strong></li>
                         </ul>
-                        <a href="/produtos/{{ $produto['id_produto'] }}" class="d-flex btn btn-primary my-3 justify-content-center comprar">Comprar</a>
+                        <a href="#" class="d-flex btn btn-primary my-3 justify-content-center comprar">Comprar</a>
                     </div>
                 </div>
             </div>

@@ -25,4 +25,6 @@ Route::get('/usuario/{nome}', function($nome){
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/produtos/{id}', 'ProdutosController@detalheProduto');
+
 Route::get('/produtos', 'ProdutosController@listarProdutos');

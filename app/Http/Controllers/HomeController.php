@@ -3,29 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Produto;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $produtos = 
-        [
-            ['nome' => 'Deserto dos Tataros',
-             'preco' => 30.5,
-             'imagem' => 'Images/rounded.jpg'
-            ],
-
-            ['nome' => 'Admirável Mundo Novo',
-             'preco' => 40.5,
-             'imagem' => 'Images/rounded.jpg'
-            ],
-
-            ['nome' => 'Lugar Nenhum',
-             'preco' => 50.5,
-             'imagem' => 'Images/rounded.jpg'
-            ],
-             
-        ];
+        $produtos = Produto::all()->take(3);
 
         return view('home')->with('produtos', $produtos);
     }
